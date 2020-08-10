@@ -17,7 +17,44 @@
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
-          <textarea
+        <div class=input-container>
+            <div>
+                <label for="passwordLength">Password Length (8-128):</label>
+                <input type="number" id="passwordLength" 
+                min="8" max="100">
+            </div>
+            
+            <div>
+                
+                <input type="checkbox" id="lowerCase" 
+                checked>
+                <label for="lowerCase">Lower Case</label>
+            </div>
+            
+            <div>
+                
+                <input type="checkbox" id="upperCase" 
+                checked>
+                <label for="upperCase">Upper Case</label>
+            </div>
+            
+            <div>
+                
+                <input type="checkbox" id="numeric" 
+                checked>
+                <label for="numeric">Numeric Character</label>
+            </div>
+
+            <div>
+                
+                <input type="checkbox" id="specialCharacter" 
+                checked>
+                <label for="specialCharacter">Special Character</label>
+            </div>
+             
+        </div>
+
+            <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
