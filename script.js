@@ -8,19 +8,6 @@ var symbolEl = document.getElementById("symbol");
 var resultEl = document.getElementById("result");
 
 
-
-var newPassword = ""
-
-
-// Write password to the #password input
-function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-
-}
-
 // Add event listener to generate button
 generateEl.addEventListener("click", () => {
     var length = +lengthEl.value;
@@ -53,8 +40,10 @@ function generatePassword(lower, upper, number, symbol, length){
     }
 
     var finalPassword = generatedPassword.slice(0, length);
-
+    
     return finalPassword;
+    
+    
 
 function getRandomLower(){
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
